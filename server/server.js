@@ -14,7 +14,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.use(require("./routes/usuario"));
+// app.use(require("./routes/usuario"));
+// app.use(require("./routes/login"));
+
+//Configuracion global de rutas.
+app.use(require('./routes/index'));
+
 
 //Conexion de la bd de mongo.
 // mongoose.connect('mongodb://localhost:27017/cafe', (err, res) => {

@@ -81,7 +81,7 @@ app.post("/google", async(req, res) => {
             err: e
         });
     });
-    if (!googleUser) { return; }
+
     Usuario.findOne({ email: googleUser.email }, (err, user) => {
         if (err) {
             return res.status(500).json({
